@@ -15,7 +15,7 @@ This is a Discord bot built with Node.js, using the Discord.js library. It provi
 - **Trivia Command**: Asks trivia questions and checks if the user's answer is correct.
 - **Help Command**: Displays available commands and their descriptions in an embedded message.
 
-  ![1](https://github.com/Shashank519915/StellaBot/assets/120128150/4573540e-3a4c-4d90-9660-ece01996982f)
+  ![1](https://github.com/Shashank519915/StellaBot/assets/120128150/6e83789b-9489-4f53-bd2f-2e6b74e493d6)
   ![2](https://github.com/Shashank519915/StellaBot/assets/120128150/1a825a1a-8d43-4a67-87e1-5a9ff1b3b4ff)
   ![3](https://github.com/Shashank519915/StellaBot/assets/120128150/325d1d40-00e9-4c59-8fe2-ea667202c991)
   ![4](https://github.com/Shashank519915/StellaBot/assets/120128150/9fc7a140-3d1f-485a-8ab7-f34f588fe074)
