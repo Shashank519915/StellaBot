@@ -9,10 +9,10 @@ const client = new Client({
 });
 const { prefix, token } = require("./config.json");
 
-const commands = {}
+client.commands = {}
 // For each command file name (["greet","help","joke",...]) make a property on the commands object with the content of the file as value
 for(let cmdName of fs.readdirSync('./commands/').replace('.js','')){
-  commands[cmdName] = require('./commands/'+cmdName)
+  client.commands[cmdName] = require('./commands/'+cmdName)
   // { "greet" : { description: ...., execute : ... } }
 }
 
@@ -31,7 +31,7 @@ client.on("messageCreate", (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const commandName = args.shift().toLowerCase();
     // If the commands object has a key with that command name, execute it's value
-    if(commands[command]) return commands[command].execute(message);
+    if(client.commands[command]) return client.commands[command].execute(message);
 });
 
 client.login(token);
