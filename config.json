@@ -1,5 +1,6 @@
 {
     "prefix": "!",
-    "token": "YOURBOTTOKEN"
-  }
+    "token": "YOURBOTTOKEN",
+    "weatherapikey":"YOURAPIKEY"
+}
   
