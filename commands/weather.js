@@ -1,5 +1,5 @@
 const fetch = require('node-fetch').default;
-const apiKey = 'YOURAPIKEY';
+const apiKey = require('../config.json').weatherapikey;
 
 module.exports = {
   name: 'weather',
