@@ -7,11 +7,13 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
-
 const { prefix, token } = require("./config.json");
+
 const commands = {}
+// For each command file name (["greet","help","joke",...]) make a property on the commands object with the content of the file as value
 for(let cmdName of fs.readdirSync('./commands/').replace('.js','')){
   commands[cmdName] = require('./commands/'+cmdName)
+  // { "greet" : { description: ...., execute : ... } }
 }
 
 client.once("ready", () => {
@@ -23,11 +25,12 @@ client.on("messageCreate", (message) => {
   // Ignore messages from other bots
   if (message.author.bot) return;
   // IF It's a message, just reply to it
-  if (message.mentions.has(client.user.id)) return commands["mention"].execute(message);
+  if (message.mentions.has(client.user.id)) return message.channel.send("Hey, what's up?");
   // From here, if it's not command, ignore.
   if (!message.content.startsWith(prefix)) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const commandName = args.shift().toLowerCase();
+    // If the commands object has a key with that command name, execute it's value
     if(commands[command]) return commands[command].execute(message);
 });
 
