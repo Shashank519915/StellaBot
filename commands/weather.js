@@ -2,7 +2,6 @@ const fetch = require('node-fetch').default;
 const apiKey = require('../config.json').weatherapikey;
 
 module.exports = {
-  name: 'weather',
   description: 'Fetches the weather for a location',
   async execute(message, args) {
     const location = args.join(' ');
