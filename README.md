@@ -23,7 +23,9 @@ This is a Discord bot built with Node.js, using the Discord.js library. It provi
 4. Customize and extend the bot by adding new commands or modifying existing ones.
 5. Run the bot using `node bot.js` and invite it to your Discord server.
 
-![7](https://github.com/Shashank519915/StellaBot/assets/120128150/c948026c-b491-4bb1-9dea-a4202259f164)
+
+![image](https://github.com/Shashank519915/StellaBot/assets/120128150/1e44ef94-3b4c-40bd-8e7d-ec7a1e32ae25)
+
 
 ## Contributing
 
