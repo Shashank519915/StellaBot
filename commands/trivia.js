@@ -1,7 +1,6 @@
 const fetch = require('node-fetch').default;
 
 module.exports = {
-  name: 'trivia',
   description: 'Displays a random trivia question',
   async execute(message) {
     try {
