@@ -3,7 +3,7 @@
 
 # Stella Bot
 
-This is a Discord bot built with Node.js, using the Discord.js library. It provides a foundation for creating a customizable and extensible Discord bot for your server.
+This is a Discord bot built with Node.js, using the Discord.js library. It provides a foundation for creating a customizable and extensible Discord bot for your server. Uses various APIs to generate results. Scalable to any number of commands.
 
 ## Features
 
