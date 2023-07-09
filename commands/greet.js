@@ -1,5 +1,4 @@
 module.exports = {
-    name: 'greet',
     description: 'Greets a user',
     execute(message, args) {
       const user = message.mentions.members.first();
