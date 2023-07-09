@@ -15,12 +15,14 @@ This is a Discord bot built with Node.js, using the Discord.js library. It provi
 - **Trivia Command**: Asks trivia questions and checks if the user's answer is correct.
 - **Help Command**: Displays available commands and their descriptions in an embedded message.
 
-  ![1](https://github.com/Shashank519915/StellaBot/assets/120128150/6e83789b-9489-4f53-bd2f-2e6b74e493d6)
-  ![2](https://github.com/Shashank519915/StellaBot/assets/120128150/1a825a1a-8d43-4a67-87e1-5a9ff1b3b4ff)
-  ![3](https://github.com/Shashank519915/StellaBot/assets/120128150/325d1d40-00e9-4c59-8fe2-ea667202c991)
-  ![4](https://github.com/Shashank519915/StellaBot/assets/120128150/9fc7a140-3d1f-485a-8ab7-f34f588fe074)
-  ![5](https://github.com/Shashank519915/StellaBot/assets/120128150/6799b3b1-e3d7-452e-920c-7abdea8b4075)
-  ![6](https://github.com/Shashank519915/StellaBot/assets/120128150/c2257971-9fa5-44dd-b13b-475f5a22f8b8)
+## Some Screenshots of the bot's working
+  ![image](https://github.com/Shashank519915/StellaBot/assets/120128150/fc1c39d7-9fe8-4720-b057-7b4fe8bc8d98)
+  ![image](https://github.com/Shashank519915/StellaBot/assets/120128150/609ea200-f6ec-4d03-9fe1-838dbc1cb21e)
+  ![image](https://github.com/Shashank519915/StellaBot/assets/120128150/6461bf39-816f-4c7a-b967-c7114b9f0e25)
+  ![image](https://github.com/Shashank519915/StellaBot/assets/120128150/d36cdea5-efd6-43a9-b3c2-9bb36f4809d3)
+  ![image](https://github.com/Shashank519915/StellaBot/assets/120128150/93a3c8a4-8108-491e-8200-fbf15375fee8)
+
+
   ![7](https://github.com/Shashank519915/StellaBot/assets/120128150/c948026c-b491-4bb1-9dea-a4202259f164)
 
 ## Getting Started
