@@ -39,7 +39,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 - This project is built using the [Discord.js](https://discord.js.org/) library.
 - The weather information is fetched using the [OpenWeatherMaps API](https://openweathermap.org/).
-- Jokes are retrieved from the [JokesAPI](https://jokesapi.io/).
+- Jokes are retrieved from the [JokesAPI v 2.0]([https://jokesapi.io/](https://sv443.net/jokeapi/v2/)).
 - Trivia games is built using the database from the [Open Trivia Database](https://opentdb.com/).
 
 ## Disclaimer
