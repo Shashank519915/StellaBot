@@ -19,12 +19,12 @@ const client = new Client({
 });
 
 const { prefix, token } = require("./config.json");
-const jokeCommand = require("./jokeCommand");
-const greetCommand = require("./greetCommand");
-const weatherCommand = require("./weatherCommand");
-const mentionCommand = require("./mentionCommand");
-const helpCommand = require("./helpCommand");
-const triviaCommand = require("./triviaCommand");
+const jokeCommand = require("./Commands/jokeCommand");
+const greetCommand = require("./Commands/greetCommand");
+const weatherCommand = require("./Commands/weatherCommand");
+const mentionCommand = require("./Commands/mentionCommand");
+const helpCommand = require("./Commands/helpCommand");
+const triviaCommand = require("./Commands/triviaCommand");
 
 const commands = {
   joke: jokeCommand,
