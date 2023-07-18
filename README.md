@@ -12,6 +12,9 @@ This is a Discord bot built with Node.js, using the Discord.js library. It provi
 
 - **Command-based Structure**: Easily add new commands by creating separate files for each command.
 - **Command Handler**: Automatically handles and executes commands based on user input.
+- **Journal Command**: Add Journals to save in a JSON file privately(to the user).
+- **showAll Command**: Fetch all the Journals saved in an embed format.
+- **Delete Command**: Delete a specific saved journal.
 - **Joke Command**: Fetches random jokes from a joke API and sends them to the chat.
 - **Greet Command**: Greets the user mentioned with a welcome message.
 - **Weather Command**: Retrieves real-time weather information for a given location using the OpenWeatherMaps API.
@@ -25,10 +28,6 @@ This is a Discord bot built with Node.js, using the Discord.js library. It provi
 3. Set up your Discord bot token and other configurations in the `.env` file.
 4. Customize and extend the bot by adding new commands or modifying existing ones.
 5. Run the bot using `node bot.js` and invite it to your Discord server.
-
-
-![image](https://github.com/Shashank519915/StellaBot/assets/120128150/1e44ef94-3b4c-40bd-8e7d-ec7a1e32ae25)
-
 
 ## Contributing
 
@@ -44,6 +43,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 - The weather information is fetched using the [OpenWeatherMaps API](https://openweathermap.org/).
 - Jokes are retrieved from the [JokesAPI v 2.0]([https://jokesapi.io/](https://sv443.net/jokeapi/v2/)).
 - Trivia games is built using the database from the [Open Trivia Database](https://opentdb.com/).
+- Grammar Check is initiated using the [TextGears API(RapidAPI)](https://rapidapi.com/Textgears/api/textgears).
 
 ## Disclaimer
 

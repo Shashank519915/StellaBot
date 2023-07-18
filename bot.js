@@ -15,6 +15,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessageReactions
   ],
 });
 
@@ -25,6 +26,9 @@ const weatherCommand = require("./Commands/weatherCommand");
 const mentionCommand = require("./Commands/mentionCommand");
 const helpCommand = require("./Commands/helpCommand");
 const triviaCommand = require("./Commands/triviaCommand");
+const journalCommand = require("./Commands/journalCommand");
+const deleteCommand = require("./Commands/deleteCommand");
+const showallJournalCommand = require("./Commands/showallJournalCommand");
 
 const commands = {
   joke: jokeCommand,
@@ -33,6 +37,7 @@ const commands = {
   mention: mentionCommand,
   help: helpCommand,
   trivia: triviaCommand,
+  showall: showallJournalCommand,
 };
 
 client.once("ready", () => {
@@ -42,6 +47,8 @@ client.once("ready", () => {
 client.on("messageCreate", (message) => {
   console.log("Message received:", message.content);
   if (message.author.bot) return; // Ignore messages from other bots
+
+  
 
   if (message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -57,6 +64,12 @@ client.on("messageCreate", (message) => {
       helpCommand.execute(message);
     } else if (command === "trivia") {
       triviaCommand.execute(message);
+    } else if (command === "journal") {
+      journalCommand.execute(message);
+    } else if (command === "delete") {
+      deleteCommand.execute(message);
+    } else if (command === "showall") {
+      showallJournalCommand.execute(message);
     }
   } else if (message.mentions.has(client.user)) {
     commands["mention"].execute(message);
