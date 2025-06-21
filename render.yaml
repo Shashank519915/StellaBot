@@ -8,11 +8,13 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: DISCORD_TOKEN
+      - key: prefix
         sync: false
-      - key: WEATHER_API_KEY
+      - key: token
         sync: false
-      - key: TEXTGEAR_API_KEY
+      - key: weatherapikey
         sync: false
-      - key: MONGODB_URI
+      - key: textgearapikey
+        sync: false
+      - key: mongoUri
         sync: false
