@@ -1,60 +1,135 @@
 // deletecommand.js
-const fs = require('fs');
-const path = require('path');
+const { JournalEntry } = require('../db');
 
 module.exports = {
   name: 'delete',
-  description: 'Delete the last journal entry',
-  execute(message) {
+  description: 'Navigate and delete journal entries',
+  async execute(message) {
+    // Get the user ID of the command author
     const userId = message.author.id;
-    const userJournalPath = path.join(__dirname, '..', 'journals', `${userId}.json`);
 
-    fs.readFile(userJournalPath, (err, data) => {
-      if (err) {
-        console.error(err);
-        message.channel.send('An error occurred while accessing your journal.');
-        return;
+    try {
+      // Fetch all journal entries for this user, sorted newest first
+      const allEntries = await JournalEntry.find({ userId }).sort({ _id: -1 });
+
+      // Check if there are any entries to delete
+      if (allEntries.length === 0) {
+        return message.channel.send('No journal entries found.');
       }
 
-      const journalData = JSON.parse(data);
+      // Track which entry is currently being viewed
+      let currentIndex = 0;
 
-      if (journalData.length === 0) {
-        message.channel.send('No journal entries found to delete.');
-        return;
-      }
+      /**
+       * Displays a journal entry with navigation controls
+       * @param {number} index - The index of the entry to display
+       */
+      const showEntry = async (index) => {
+        // Get the specific journal entry
+        const entry = allEntries[index];
+        
+        // Create embed message to display the entry
+        const embed = {
+          color: 0x0099ff,
+          title: `Journal Entry (${index + 1}/${allEntries.length})`,
+          fields: [{
+            name: `${entry.date} - ${entry.time}`,
+            value: '```' + entry.content + '\n```'
+          }],
+          footer: {
+            text: 'React with to: ◀️ ▶️ Navigate | ✅ Delete | ❌ Cancel'
+          },
+        };
 
-      const lastEntryIndex = journalData.length - 1;
-      const lastEntry = journalData[lastEntryIndex];
+        // Send the embed message
+        const msg = await message.channel.send({ embeds: [embed] });
+        
+        // Add navigation reactions if there are multiple entries
+        if (allEntries.length > 1) {
+          await msg.react('◀️'); // Left arrow for older entries
+          await msg.react('▶️'); // Right arrow for newer entries
+        }
+        // Add action reactions
+        await msg.react('✅'); // Check mark to delete
+        await msg.react('❌'); // Cross to cancel
 
-      const journalEmbed = {
-        color: 0x0099ff,
-        title: 'Last Journal Entry',
-        description: `Date: ${lastEntry.date}\nTime: ${lastEntry.time}\n\n${lastEntry.content}`,
-        footer: {
-          text: 'React with ✅ to delete this entry',
-        },
+        // Filter to only accept reactions from the command author
+        const filter = (reaction, user) => 
+          (['◀️', '▶️', '✅', '❌'].includes(reaction.emoji.name)) && 
+          user.id === userId;
+        
+        // Create collector with 60 second timeout
+        const collector = msg.createReactionCollector({ 
+          filter, 
+          time: 60000
+        });
+
+        // Handle when a user reacts
+        collector.on('collect', async (reaction) => {
+          try {
+            switch (reaction.emoji.name) {
+              case '▶️': // Right arrow - newer entry
+                if (currentIndex < allEntries.length - 1) {
+                  currentIndex++;
+                  collector.stop();
+                  await msg.delete().catch(() => {}); // Delete old message
+                  await showEntry(currentIndex); // Show new entry
+                }
+                break;
+              
+              case '◀️': // Left arrow - older entry
+                if (currentIndex > 0) {
+                  currentIndex--;
+                  collector.stop();
+                  await msg.delete().catch(() => {});
+                  await showEntry(currentIndex);
+                }
+                break;
+              
+              case '✅': // Check mark - delete entry
+                const entryToDelete = allEntries[currentIndex];
+                await JournalEntry.deleteOne({ _id: entryToDelete._id });
+                message.channel.send(`✅ Entry from ${entryToDelete.date} deleted.`);
+                collector.stop();
+                await msg.delete().catch(() => {});
+                break;
+              
+              case '❌': // Cross - cancel operation
+                message.channel.send('Deletion cancelled.');
+                collector.stop();
+                await msg.delete().catch(() => {});
+                break;
+            }
+          } catch (error) {
+            console.error('Error handling reaction:', error);
+            message.channel.send('An error occurred.');
+          }
+        });
+
+        // Clean up when collector ends (timeout or manual stop)
+        collector.on('end', async () => {
+          try {
+            // Only try to remove reactions if message still exists
+            if (!msg.deleted) {
+              await msg.reactions.removeAll().catch(error => {
+                // Ignore "Unknown Message" errors (code 10008)
+                if (error.code !== 10008) console.error(error);
+              });
+            }
+          } catch (error) {
+            // Ignore "Unknown Message" errors (code 10008)
+            if (error.code !== 10008) console.error(error);
+          }
+        });
       };
 
-      message.channel.send({ embeds: [journalEmbed] })
-        .then((sentMessage) => {
-          sentMessage.react('✅');
-          const filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === userId;
-          const collector = sentMessage.createReactionCollector({ filter, max: 1 });
+      // Start by showing the first (newest) entry
+      await showEntry(0);
 
-          collector.on('collect', () => {
-            journalData.pop();
-
-            fs.writeFile(userJournalPath, JSON.stringify(journalData), (err) => {
-              if (err) {
-                console.error(err);
-                message.channel.send('An error occurred while deleting the journal entry.');
-              } else {
-                console.log(`Journal entry deleted for user: ${userId}`);
-                message.channel.send('Journal entry deleted.');
-              }
-            });
-          });
-        });
-    });
+    } catch (error) {
+      // Handle any errors in the main command execution
+      console.error('Error in delete command:', error);
+      message.channel.send('An error occurred while accessing your journal.');
+    }
   },
 };
