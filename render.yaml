@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: stella-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: WEATHER_API_KEY
+        sync: false
+      - key: TEXTGEAR_API_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
