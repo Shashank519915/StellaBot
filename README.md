@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Project Stella Bot Logo](https://img.shields.io/badge/Stella-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ZzbdCCPFb4)
+[![Project Stella Bot Logo](https://img.shields.io/badge/Stella-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/aGhuvYMDvD)
 
 **A Feature-Rich Discord Bot with Journal System & Smart Utilities**
 
@@ -83,7 +83,7 @@
 ## 🚀 Quick Start
 
 ### **Join Our Production Discord Server**
-[**🎯 Join and use Project Stella Bot in this Server**](https://discord.gg/Ag2eZzbY)
+[**🎯 Join and use Project Stella Bot in this Server**](https://discord.gg/aGhuvYMDvD)
 
 ### **Try These Commands:**
 1. `!help` - Get familiar with all features
@@ -317,7 +317,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Need Help?**
 
-[![Discord Server](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Ag2eZzbY)
+[![Discord Server](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/aGhuvYMDvD)
 [![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shashank519915/StellaBot/issues)
 
 **Found a Bug?** [Report it here](https://github.com/Shashank519915/StellaBot/issues/new)  
