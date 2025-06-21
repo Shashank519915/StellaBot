@@ -1,5 +1,5 @@
-
-/*
+// bot.js
+/*  INTENTS USED IN OLD DISCORD.JS
 const { Client, Intents } = require('discord.js');
 const client = new Discord.Client({ 
   intents: [ 
@@ -9,7 +9,11 @@ const client = new Discord.Client({
   ] 
 });
 */
+
 const { Client, GatewayIntentBits } = require("discord.js");
+const { connectDB, JournalEntry } = require('./db'); // Import the connection
+
+// Initialize Discord client
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -19,7 +23,8 @@ const client = new Client({
   ],
 });
 
-const { prefix, token } = require("./config.json");
+// Config and command imports
+const { token, prefix } = require("./config.json");
 const jokeCommand = require("./Commands/jokeCommand");
 const greetCommand = require("./Commands/greetCommand");
 const weatherCommand = require("./Commands/weatherCommand");
@@ -30,6 +35,7 @@ const journalCommand = require("./Commands/journalCommand");
 const deleteCommand = require("./Commands/deleteCommand");
 const showallJournalCommand = require("./Commands/showallJournalCommand");
 
+// Command mapping
 const commands = {
   joke: jokeCommand,
   greet: greetCommand,
@@ -40,40 +46,46 @@ const commands = {
   showall: showallJournalCommand,
 };
 
+// Bot ready event
 client.once("ready", () => {
-  console.log("Bot is ready!");
+  console.log("🤖 Bot is ready!");
 });
 
+// Message handler
 client.on("messageCreate", (message) => {
-  console.log("Message received:", message.content);
-  if (message.author.bot) return; // Ignore messages from other bots
+  if (message.author.bot) return;
 
-  
+  console.log("📩 Message received:", message.content);
 
   if (message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    if (command === "joke") {
-      jokeCommand.execute(message);
-    } else if (command === "greet") {
-      greetCommand.execute(message, args);
-    } else if (command === "weather") {
-      weatherCommand.execute(message, args);
-    } else if (command === "help") {
-      helpCommand.execute(message);
-    } else if (command === "trivia") {
-      triviaCommand.execute(message);
+    // Execute corresponding command
+    if (commands[command]) {
+      commands[command].execute(message, args);
     } else if (command === "journal") {
       journalCommand.execute(message);
     } else if (command === "delete") {
       deleteCommand.execute(message);
-    } else if (command === "showall") {
-      showallJournalCommand.execute(message);
     }
   } else if (message.mentions.has(client.user)) {
     commands["mention"].execute(message);
   }
 });
 
-client.login(token);
+// Start the application
+async function startBot() {
+  try {
+    console.log('🔗 Connecting to MongoDB...');
+    await connectDB();
+    
+    console.log('🤖 Logging in to Discord...');
+    await client.login(token);
+  } catch (error) {
+    console.error('🚨 Startup failed:', error);
+    process.exit(1);
+  }
+}
+
+startBot();
