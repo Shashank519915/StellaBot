@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Stella Bot Logo](https://img.shields.io/badge/Stella-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+[![Stella Bot Logo](https://img.shields.io/badge/Stella-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ZzbdCCPFb4)
 
 **A Feature-Rich Discord Bot with Journal System & Smart Utilities**
 
