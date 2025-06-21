@@ -317,11 +317,11 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Need Help?**
 
-[![Discord Server](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/your-server)
-[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/stella-bot/issues)
+[![Discord Server](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Ag2eZzbY)
+[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shashank519915/StellaBot/issues)
 
-**Found a Bug?** [Report it here](https://github.com/yourusername/stella-bot/issues/new)  
-**Feature Request?** [Suggest it here](https://github.com/yourusername/stella-bot/discussions)
+**Found a Bug?** [Report it here](https://github.com/Shashank519915/StellaBot/issues/new)  
+**Feature Request?** [Suggest it here](https://github.com/Shashank519915/StellaBot/discussions)
 
 </div>
 
@@ -329,7 +329,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-**Made with ❤️ by [Your Name](https://github.com/yourusername)**
+**Made with ❤️ by [Shashank Anand](https://github.com/Shashank519915)**
 
 ⭐ **Star this repo if you found it helpful!** ⭐
 
