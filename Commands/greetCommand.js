@@ -1,3 +1,4 @@
+// greetCommand.js
 module.exports = {
     name: 'greet',
     description: 'Greets a user',
