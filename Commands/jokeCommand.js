@@ -1,3 +1,4 @@
+// jokeCommand.js
 const fetch = require('node-fetch').default;
 
 module.exports = {
