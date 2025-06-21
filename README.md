@@ -1,4 +1,4 @@
-#StellaBot v1.0
+#StellaBot v2.0
 
 ![Static Badge](https://img.shields.io/badge/node.js-a?logo=npm&link=https%3A%2F%2Fnodejs.org%2Fen)
 
