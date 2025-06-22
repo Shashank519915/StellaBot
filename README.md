@@ -11,7 +11,7 @@
 [![Discord.js](https://img.shields.io/badge/Discord.js-14.x-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.js.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
+[![Express.js](https://img.shields.io/badge/Express.js-5.x-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
 [![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com/)
 
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
