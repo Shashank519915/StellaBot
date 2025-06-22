@@ -11,6 +11,9 @@
 [![Discord.js](https://img.shields.io/badge/Discord.js-14.x-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.js.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com/)
+
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 [![Bot Status](https://img.shields.io/badge/Status-Online-success?style=flat-square)](https://discord.com/invite/your-server)
@@ -62,6 +65,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Discord.js](https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.js.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
 ### **Database & Storage**
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
@@ -75,6 +79,9 @@
 
 ### **HTTP & Networking**
 [![Node-Fetch](https://img.shields.io/badge/Node--Fetch-000000?style=for-the-badge&logo=node.js&logoColor=white)](https://www.npmjs.com/package/node-fetch)
+
+### **Hosting & Deployment**
+[![Hosted on Render](https://img.shields.io/badge/Hosted%20on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
 
 </div>
 
@@ -90,6 +97,11 @@
 2. `!journal Hello Stella!` - Create your first journal entry  
 3. `!weather your-city` - Check your local weather
 4. `!trivia` - Test your knowledge
+
+---
+
+### **Bot status on Uptime Robot**
+Uptime Keep-Alive: An Express-based keep-alive route ensures the bot stays live on Render.
 
 ---
 
@@ -156,13 +168,13 @@
 
 ### **1. Clone Repository**
 ```bash
-git clone https://github.com/yourusername/stella-bot.git
-cd stella-bot
+git clone https://github.com/Shashank519915/StellaBot.git
+cd StellaBot
 ```
 
 ### **2. Install Dependencies**
 ```bash
-npm install discord.js mongoose node-fetch
+npm install discord.js mongoose node-fetch express
 ```
 
 ### **3. Environment Setup**
@@ -265,7 +277,8 @@ stella-bot/
 ```json
 {
   "discord.js": "^14.x",
-  "mongoose": "^7.x", 
+  "mongoose": "^7.x",
+  "express": "^5.x"
   "node-fetch": "^2.x"
 }
 ```
@@ -330,6 +343,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <div align="center">
 
 **Made with ❤️ by [Shashank Anand](https://github.com/Shashank519915)**
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/shashankanand)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/shashank-anand)
 
 ⭐ **Star this repo if you found it helpful!** ⭐
 
