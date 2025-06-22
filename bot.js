@@ -89,3 +89,20 @@ async function startBot() {
 }
 
 startBot();
+
+
+
+// to keep the bot alive on render, setting up a dummy express port, that is utilised by UpTimeRobot to ping bot every 5mins.
+
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("✨ Stella Bot is alive and running!");
+});
+
+app.listen(PORT, () => {
+  console.log(`🌐 Ping server running on http://localhost:${PORT}`);
+});
+
