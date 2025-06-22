@@ -346,8 +346,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <br>
 <br>
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/shashankanand)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/shashank-anand)
+[![LinkedIn Badge](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/shashank-anand)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:letshashankknow@gmail.com)
+
 
 
 ⭐ **Star this repo if you found it helpful!** ⭐
