@@ -16,7 +16,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-[![Bot Status](https://img.shields.io/badge/Status-Online-success?style=flat-square)](https://discord.com/invite/your-server)
+[![Bot Status](https://img.shields.io/badge/Status-Online-success?style=flat-square)](https://discord.gg/aGhuvYMDvD)
 [![Version](https://img.shields.io/badge/Version-2.0-brightgreen?style=flat-square)](https://github.com/yourusername/stella-bot/releases)
 [![Uptime](https://img.shields.io/badge/Uptime-99.9%25-brightgreen?style=flat-square)]()
 
